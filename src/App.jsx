@@ -1,5 +1,5 @@
 // import AddCategory from "./components/AddCategory"
-
+import './App.css';
 import { useEffect, useState } from "react";
 
 function App() {
@@ -32,11 +32,13 @@ function App() {
   }
   return (
     <>
-      <div>
+    <div className="container">
+      <div className='input-wrapper'>
          <h2>Giphy-Gif</h2>
          <form onSubmit={searchGif}>
             <input 
             type="text"
+            placeholder="Search...."
             onChange={(e)=>{
               setValue(e.target.value)
             }}
@@ -45,7 +47,7 @@ function App() {
          </form>
          {error ? <p>Field is empty</p> : null}
       </div>
-        <div>
+        <div className="container-gifs">
           {data.map((value,index) => {
             return (
               <div key={index}>
@@ -54,6 +56,7 @@ function App() {
               </div>
             );
           })}
+        </div>
         </div>
     </>
   )
