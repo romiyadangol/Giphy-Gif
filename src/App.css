@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .input-wrapper{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
     width: 300px;
     padding: 20px;
 }
@@ -24,4 +27,27 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 20px;
     margin-bottom: 10px;
+}
+.container-gifs{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;  
+  justify-content: center;
+  margin-top: 4%;
+  padding: 0 5%;
+}
+.container-gifs img{
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.container-gifs img:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.container-gifs p{
+  text-align: center;
+  font-size: 1.0rem;
+  color: #a8a3a3;
 }

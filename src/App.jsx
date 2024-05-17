@@ -50,9 +50,9 @@ function App() {
         <div className="container-gifs">
           {data.map((value,index) => {
             return (
-              <div key={index}>
-                <h3>{value.title}</h3>
+              <div key={index}>  
                 <img src={value.images.downsized_medium.url} alt={value.title} />
+                <p>{value.title}</p>
               </div>
             );
           })}
